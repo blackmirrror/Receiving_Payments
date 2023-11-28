@@ -6,14 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.blackmirrror.receivingpayments.R
+import ru.blackmirrror.receivingpayments.databinding.FragmentPaymentsBinding
 
 class PaymentsFragment : Fragment() {
+
+    private lateinit var binding: FragmentPaymentsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_payments, container, false)
+    ): View {
+        binding = FragmentPaymentsBinding.inflate(inflater, container, false)
+
+        setUpFields()
+
+        return binding.root
+    }
+
+    private fun setUpFields() {
+        binding.toolbar.title.text = getString(R.string.title_payments)
     }
 }
