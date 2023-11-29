@@ -8,6 +8,8 @@
     <string name="hint_password">Пароль</string>
     <string name="text_enter_data">Введите данные для входа</string>
     <string name="btn_enter">Войти</string>
+    <string name="toast_fill_fields">Пожалуйста, заполните все поля</string>
+    <string name="toast_error_login_data">Неверный логин или пароль</string>
 
     <string name="title_payments">Платежи</string>
 </resources>
