@@ -6,7 +6,7 @@ import ru.blackmirrror.receivingpayments.authorization.domain.models.Token
 
 data class ResponseShell (
     @SerializedName("success"  ) var success  : String?   = null,
-    @SerializedName("response" ) var response : ResponseToken? = ResponseToken()
+    @SerializedName("response" ) var responseToken : ResponseToken? = ResponseToken()
 )
 
 data class ResponseToken (

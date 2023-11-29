@@ -8,7 +8,7 @@ import ru.blackmirrror.receivingpayments.authorization.domain.AuthRepository
 class AuthRepositoryImpl(private val service: AuthService): AuthRepository {
     override suspend fun login(login: String, password: String): String? {
         val requestLogin = RequestLogin(login, password)
-        val token = service.login(APPKEY, V, requestLogin).response
+        val token = service.login(APPKEY, V, requestLogin).body()?.responseToken
         return token?.let { dataToDomain(it).token }
     }
 

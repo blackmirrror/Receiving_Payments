@@ -3,7 +3,7 @@ package ru.blackmirrror.receivingpayments.authorization.domain.models
 
 data class Shell (
     var success  : String?   = null,
-    var response : Token? = Token()
+    var responseToken : Token? = Token()
 )
 
 data class Token (
